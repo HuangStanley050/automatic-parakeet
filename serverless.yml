@@ -1,7 +1,7 @@
 # NOTE: update this with your service name
 service: redisPlayGround
 
-# Create an optimized package for our functions 
+# Create an optimized package for our functions
 package:
   individually: true
 
@@ -22,8 +22,12 @@ provider:
   #
   #environment:
   #  SAMPLE_ENV_VAR: ${env:SAMPLE_ENV_VAR}
+environment:
+  DB: ${env:DB}
 
 functions:
+  seed:
+    handler: seed.gen
   hello:
     handler: handler.hello
     events:
