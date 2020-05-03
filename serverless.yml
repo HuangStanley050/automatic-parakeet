@@ -30,9 +30,9 @@ environment:
 functions:
   seed:
     handler: seed.gen
-  hello:
-    handler: handler.hello
+  getUsers:
+    handler: handler.getUsers
     events:
       - http:
-          path: hello
+          path: users
           method: get
