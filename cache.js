@@ -15,6 +15,7 @@ mongoose.Query.prototype.cache = function (options = {}) {
   // cache key for top level property
   this.hashKey = JSON.stringify(options.key || "default");
   // to make this a chainable function call, return this
+  console.log("using redis");
   return this;
 };
 

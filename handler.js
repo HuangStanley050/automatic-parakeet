@@ -1,10 +1,11 @@
 import User from "./user";
 import { connectDB } from "./db";
+import "./cache";
 
 export const getUsers = async (event, context) => {
   try {
     await connectDB();
-    const users = await User.find({});
+    const users = await User.find({}).cache();
     console.log(users);
     return {
       statusCode: 200,
