@@ -24,6 +24,8 @@ provider:
   #  SAMPLE_ENV_VAR: ${env:SAMPLE_ENV_VAR}
 environment:
   DB: ${env:DB}
+  REDIS_URL: ${env:REDIS_URL}
+  REDIS_AUTH: ${evn:REDIS_AUTh}
 
 functions:
   seed:
